@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/actionMovie"
+        android:enabled="true"
+        android:icon="@drawable/ic_checked_2"
+        android:title="Movie" />
+    <item
+        android:id="@+id/actionTVShow"
+        android:enabled="true"
+        android:icon="@drawable/ic_arrow_down"
+        android:title="TV Show" />
+    <item
+        android:id="@+id/actionGraph"
+        android:enabled="true"
+        android:icon="@drawable/ic_unchecked_border"
+        android:title="Graph" />
+</menu>

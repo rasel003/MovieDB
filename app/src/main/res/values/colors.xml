@@ -1,10 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
+
+    <color name="colorPrimary">#1EA9E4</color>
+    <color name="colorSecondary">#E8F6FC</color>
+    <color name="colorAccent">#D2EEFA</color>
+
+    <color name="dark_primary">#1E62D4</color>
+    <color name="dark_primary2">#0249C0</color>
+
+    <color name="dark_secondary_color">#E8F6FC</color>
+    <color name="color_merchant_box">#CFFCFF</color>
+    <color name="backgroundColor">#F4FBFE</color>
+    <color name="bottomSheetBackgroundColor">#FBFDFF</color>
+    <color name="color_send_parcel_box">#C7FCFF</color>
+    <color name="color_send_multiple_parcel">#9DF9E4</color>
+    <color name="gray_black">#5B6676</color>
+    <color name="gray">#999999</color>
+    <color name="color_title">#334660</color>
+    <color name="red_color">#FF4238</color>
+
+    <color name="color_header_title">#25303F</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="white_200">#f5f5f5</color>
+    <color name="white_300">#f0f0f0</color>
+
+    <color name="black_800">#262626</color>
+    <color name="black_600">#555555</color>
+    <color name="black_500">#7b7b7b</color>
+    <color name="black">#000000</color>
+
+    <color name="color_back_bg">#EBF1FA</color>
+
+    <color name="color_time_line_curve">#EFFEFF</color>
+
+    <color name="line_selected">#15C15D</color>
+    <color name="line_default">#8D97A4</color>
+    <color name="time_line">#BBE5F7</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="dot_line">#F6FBFF</color>
+
+    <color name="design_default_color_primary">#999999</color>
+
+    <!--Nav bar color protection for behavior differences between Android P and Q. All sdk-->
+    <!--levels should draw fullscreen. P should color the nav bar with a translucent background -->
+    <!--to guard for contrast. Q should have a transparent nav bar as Q will automatically -->
+    <!--handles contrast by either dynamically coloring the nav bar handle (gesture nav) -->
+    <!--or automatically applying a translucent background (3-button mode).-->
+    <color name="nav_bar">@color/backgroundColor</color>
 </resources>
