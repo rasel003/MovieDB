@@ -14,23 +14,16 @@
  * limitations under the License.
  */
 
-package com.rasel.moviedb.data.network.responses
+package com.rasel.moviedb.data.network
 
-import com.google.gson.annotations.SerializedName
 import com.rasel.moviedb.data.db.entities.MovieInfo
+import java.lang.Exception
 
 /**
- * Data class to hold repo responses from searchRepo API calls.
+ * RepoSearchResult from a search, which contains List<Repo> holding query data,
+ * and a String of network error state.
  */
-data class MovieListResponse(
-    @SerializedName("page")
-    val page: Int,
-    @SerializedName("results")
-    val items: List<MovieInfo> = emptyList(),
-    @SerializedName("total_pages")
-    val totalPages: Int,
-    @SerializedName("total_results")
-    val totalResults: Int,
-
-    val nextPage: Int? = null
-)
+sealed class RepoSearchResult {
+    data class Success(val data: List<MovieInfo>) : RepoSearchResult()
+    data class Error(val error: Exception) : RepoSearchResult()
+}

@@ -11,7 +11,7 @@ import android.provider.Settings
 import com.orhanobut.logger.AndroidLogAdapter
 import com.orhanobut.logger.BuildConfig
 import com.orhanobut.logger.Logger
-import com.paperflymerchantapp.utils.CHANNEL_ID_RECEIVED_LEAVE_REQUEST
+import com.rasel.moviedb.utils.CHANNEL_ID_RECEIVED_LEAVE_REQUEST
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp

@@ -1,4 +1,4 @@
-package com.paperflymerchantapp.utils
+package com.rasel.moviedb.utils
 
 /**
  * Constants used throughout the app.
@@ -7,7 +7,7 @@ package com.paperflymerchantapp.utils
 
 
 
-const val KEY_ORDER_ID = "order_id"
+const val KEY_MOVIE_ID = "movie_id"
 const val SOURCE = "source"
 const val ORDER_TYPE = "orderType"
 const val KEY_PHONE_NUMBER = "phone_number"

@@ -13,11 +13,16 @@
     </data>
 
 
-    <androidx.core.widget.NestedScrollView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.c2c_home.view.fragments.C2CHomeFragment">
+        android:padding="16dp"
+        tools:context=".MainActivity">
 
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/spikeChart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-    </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
 </layout>

@@ -1,7 +1,7 @@
 package com.paperflymerchantapp.di
 
 import android.content.Context
-import com.paperflymerchantapp.data.db.AppDatabase
+import com.rasel.moviedb.data.db.AppDatabase
 import com.rasel.moviedb.data.preference.AppPrefsManager
 import dagger.Module
 import dagger.Provides

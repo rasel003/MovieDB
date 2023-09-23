@@ -1,21 +1,23 @@
-package com.paperflymerchantapp.data.db
+package com.rasel.moviedb.data.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.paperflymerchantapp.data.db.dao.UserDataDao
-import com.paperflymerchantapp.data.db.entities.UserData
+import com.rasel.moviedb.data.db.dao.MovieDao
+import com.rasel.moviedb.data.db.dao.RemoteKeysDao
+import com.rasel.moviedb.data.db.entities.MovieInfo
 
 @Database(
-    entities = [UserData::class], version = 5,
+    entities = [ MovieInfo::class, RemoteKeys::class], version = 5, exportSchema = false
 )
 
 //Converter class is used to store and retrieve data in the database when is not storable  in their original format
 //@TypeConverters(Converters::class)
 abstract class AppDatabase : RoomDatabase() {
 
-    abstract fun userDao(): UserDataDao
+    abstract fun reposDao(): MovieDao
+    abstract fun remoteKeysDao(): RemoteKeysDao
 
     companion object {
 
@@ -33,7 +35,7 @@ abstract class AppDatabase : RoomDatabase() {
             Room.databaseBuilder(
                 context.applicationContext,
                 AppDatabase::class.java,
-                "paperfly_go_database.db"
+                "movie_database.db"
             ).allowMainThreadQueries().build()
     }
 }
