@@ -23,7 +23,7 @@
         <item name="behavior_hideable">false</item>
         <item name="behavior_peekHeight">700dp</item>
         <!--        <item name="backgroundTint">@color/transparent</item>-->
-        <item name="shapeAppearance">@style/ShapeAppearance.PaperflyGo.LargeComponent</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.MovieDB.LargeComponent</item>
     </style>
 
     <style name="ModalBottomSheetDialog2" parent="Widget.MaterialComponents.BottomSheet.Modal">
@@ -31,7 +31,7 @@
         <item name="behavior_hideable">false</item>
         <item name="behavior_peekHeight">2000dp</item>
         <!--        <item name="backgroundTint">@color/transparent</item>-->
-        <item name="shapeAppearance">@style/ShapeAppearance.PaperflyGo.LargeComponent</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.MovieDB.LargeComponent</item>
     </style>
     <style name="checkbox">
         <item name="android:background">#0249C0</item>
@@ -43,10 +43,10 @@
         <item name="android:scaleY">0.8</item>
     </style>
 
-    <style name="ThemeOverlay.PaperflyGo.BottomSheetDialog" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+    <style name="ThemeOverlay.MovieDB.BottomSheetDialog" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
         <item name="bottomSheetStyle">@style/ModalBottomSheetDialog</item>
     </style>
-    <style name="ThemeOverlay.PaperflyGo.BottomSheetDialog.FullScreen" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+    <style name="ThemeOverlay.MovieDB.BottomSheetDialog.FullScreen" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
         <item name="bottomSheetStyle">@style/ModalBottomSheetDialog2</item>
     </style>
 
@@ -61,22 +61,22 @@
 
     <!-- used ExposedDropdownMenu / Spinner menu with end icon-->
     <!-- used ExposedDropdownMenu / Spinner menu with end icon-->
-    <style name="Widget.PaperflyGo.ExposedDropdownMenu" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
-        <item name="materialThemeOverlay">@style/ThemeOverlay.PaperflyGo.ExposedDropdownMenu</item>
-        <item name="shapeAppearance">@style/ShapeAppearance.PaperflyGo.SmallComponent</item>
+    <style name="Widget.MovieDB.ExposedDropdownMenu" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.MovieDB.ExposedDropdownMenu</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.MovieDB.SmallComponent</item>
         <item name="hintTextColor">?attr/colorOnSurface</item>
         <item name="endIconMode">custom</item>
         <item name="endIconDrawable">@drawable/ic_arrow_down</item>
         <item name="endIconTint">?attr/colorOnSurface</item>
     </style>
 
-    <style name="ThemeOverlay.PaperflyGo.ExposedDropdownMenu" parent="">
-        <item name="autoCompleteTextViewStyle">@style/Widget.PaperflyGo.AutoCompleteTextView</item>
+    <style name="ThemeOverlay.MovieDB.ExposedDropdownMenu" parent="">
+        <item name="autoCompleteTextViewStyle">@style/Widget.MovieDB.AutoCompleteTextView</item>
         <item name="colorControlActivated">@color/black_800</item>
         <item name="colorSurface">@color/colorPrimary</item>
     </style>
 
-    <style name="Widget.PaperflyGo.AutoCompleteTextView" parent="Widget.AppCompat.Light.AutoCompleteTextView">
+    <style name="Widget.MovieDB.AutoCompleteTextView" parent="Widget.AppCompat.Light.AutoCompleteTextView">
         <item name="android:focusable">false</item>
         <item name="android:focusableInTouchMode">false</item>
         <item name="android:inputType">textMultiLine|text</item>
@@ -93,8 +93,8 @@
         <item name="colorControlHighlight">@color/colorPrimary</item>
     </style>
 
-    <style name="Widget.PaperflyGo.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-        <!--        <item name="shapeAppearance">@style/ShapeAppearance.PaperflyGo.Image.WithOutRounded</item>-->
+    <style name="Widget.MovieDB.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <!--        <item name="shapeAppearance">@style/ShapeAppearance.MovieDB.Image.WithOutRounded</item>-->
         <item name="hintTextColor">@color/transparent</item>
         <item name="boxBackgroundColor">@color/color_back_bg</item>
         <item name="boxStrokeWidth">0dp</item>
@@ -102,7 +102,7 @@
         <item name="boxStrokeColor">@color/transparent</item>
     </style>
 
-    <style name="Widget.PaperflyGo.TextInputEditText" parent="Widget.Design.TextInputEditText">
+    <style name="Widget.MovieDB.TextInputEditText" parent="Widget.Design.TextInputEditText">
         <item name="android:textColor">@color/color_title</item>
         <item name="android:textColorHint">@color/gray</item>
         <item name="android:textSize">12dp</item>
@@ -117,25 +117,25 @@
         <item name="android:drawableTint" tools:ignore="NewApi">@color/data_enable</item>
     </style>
 
-    <style name="Widget.PaperflyGo.TextInputEditText.Spinner" parent="Widget.PaperflyGo.TextInputEditText">
+    <style name="Widget.MovieDB.TextInputEditText.Spinner" parent="Widget.MovieDB.TextInputEditText">
         <item name="android:focusable">false</item>
     </style>
 
 
-    <style name="Widget.PaperflyGo.Button.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
-        <item name="materialThemeOverlay">@style/ThemeOverlay.PaperflyGo.Button.TextButton</item>
-        <item name="android:textAppearance">@style/TextAppearance.PaperflyGo.Button</item>
-        <item name="shapeAppearance">@style/ShapeAppearance.PaperflyGo.SmallComponent</item>
+    <style name="Widget.MovieDB.Button.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.MovieDB.Button.TextButton</item>
+        <item name="android:textAppearance">@style/TextAppearance.MovieDB.Button</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.MovieDB.SmallComponent</item>
         <item name="iconPadding">20dp</item>
         <item name="iconSize">20sp</item>
         <item name="android:textSize">15sp</item>
         <item name="android:textAlignment">textStart</item>
     </style>
 
-    <style name="Widget.PaperflyGo.Button.TextButton.Menu" parent="Widget.MaterialComponents.Button.TextButton">
-        <item name="materialThemeOverlay">@style/ThemeOverlay.PaperflyGo.Button.TextButton</item>
-        <item name="android:textAppearance">@style/TextAppearance.PaperflyGo.Button</item>
-        <item name="shapeAppearance">@style/ShapeAppearance.PaperflyGo.SmallComponent</item>
+    <style name="Widget.MovieDB.Button.TextButton.Menu" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.MovieDB.Button.TextButton</item>
+        <item name="android:textAppearance">@style/TextAppearance.MovieDB.Button</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.MovieDB.SmallComponent</item>
         <item name="iconPadding">16dp</item>
         <item name="iconSize">20sp</item>
         <item name="icon">@drawable/ic_arrow_down</item>
@@ -150,19 +150,19 @@
         <item name="android:textAlignment">textStart</item>
     </style>
 
-    <style name="Widget.PaperflyGo.Button.OutlinedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="materialThemeOverlay">@style/ThemeOverlay.PaperflyGo.Button.OutlinedButton
+    <style name="Widget.MovieDB.Button.OutlinedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.MovieDB.Button.OutlinedButton
         </item>
-        <item name="android:textAppearance">@style/TextAppearance.PaperflyGo.Button</item>
-        <item name="shapeAppearance">@style/ShapeAppearance.PaperflyGo.SmallComponent</item>
+        <item name="android:textAppearance">@style/TextAppearance.MovieDB.Button</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.MovieDB.SmallComponent</item>
         <item name="android:textStyle">bold</item>
         <item name="strokeColor">?colorPrimary</item>
         <item name="strokeWidth">2dp</item>
     </style>
 
-    <style name="Widget.PaperflyGo.Button.Submit" parent="Widget.MaterialComponents.Button">
-        <item name="android:textAppearance">@style/TextAppearance.PaperflyGo.Button</item>
-        <item name="shapeAppearance">@style/ShapeAppearance.PaperflyGo.Button.Submit</item>
+    <style name="Widget.MovieDB.Button.Submit" parent="Widget.MaterialComponents.Button">
+        <item name="android:textAppearance">@style/TextAppearance.MovieDB.Button</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.MovieDB.Button.Submit</item>
         <item name="android:insetBottom">0dp</item>
         <item name="android:insetTop">0dp</item>
         <item name="android:includeFontPadding">false</item>
@@ -179,9 +179,9 @@
     </style>
 
 
-    <style name="Widget.PaperflyGo.Button.Round.Submit" parent="Widget.MaterialComponents.Button">
-        <item name="android:textAppearance">@style/TextAppearance.PaperflyGo.Button</item>
-        <item name="shapeAppearance">@style/ShapeAppearance.PaperflyGo.Button.round.Submit</item>
+    <style name="Widget.MovieDB.Button.Round.Submit" parent="Widget.MaterialComponents.Button">
+        <item name="android:textAppearance">@style/TextAppearance.MovieDB.Button</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.MovieDB.Button.round.Submit</item>
         <item name="android:insetBottom">0dp</item>
         <item name="android:insetTop">0dp</item>
         <item name="android:includeFontPadding">false</item>
@@ -197,9 +197,9 @@
         <item name="iconTint">@color/white</item>
     </style>
 
-    <style name="Widget.PaperflyGo.Button.Outline.Submit" parent="Widget.MaterialComponents.Button">
-        <item name="android:textAppearance">@style/TextAppearance.PaperflyGo.Button</item>
-        <item name="shapeAppearance">@style/ShapeAppearance.PaperflyGo.Button.round.Submit</item>
+    <style name="Widget.MovieDB.Button.Outline.Submit" parent="Widget.MaterialComponents.Button">
+        <item name="android:textAppearance">@style/TextAppearance.MovieDB.Button</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.MovieDB.Button.round.Submit</item>
         <item name="android:insetBottom">0dp</item>
         <item name="android:insetTop">0dp</item>
         <item name="android:includeFontPadding">false</item>
@@ -216,39 +216,39 @@
         <item name="strokeColor">@color/dark_primary2</item>
     </style>
 
-    <style name="ThemeOverlay.PaperflyGo.Button.TextButton" parent="">
+    <style name="ThemeOverlay.MovieDB.Button.TextButton" parent="">
         <item name="colorPrimary">@color/black</item>
     </style>
 
-    <style name="ThemeOverlay.PaperflyGo.Button.OutlinedButton" parent="">
+    <style name="ThemeOverlay.MovieDB.Button.OutlinedButton" parent="">
         <item name="colorPrimary">@color/dark_primary</item>
     </style>
 
-    <style name="Widget.PaperflyGo.CardView" parent="Widget.MaterialComponents.CardView">
-        <item name="materialThemeOverlay">@style/ThemeOverlay.PaperflyGo.Card</item>
-        <item name="shapeAppearance">@style/ShapeAppearance.PaperflyGo.Card</item>
+    <style name="Widget.MovieDB.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.MovieDB.Card</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.MovieDB.Card</item>
         <item name="cardElevation">0dp</item>
     </style>
 
-    <style name="ThemeOverlay.PaperflyGo.Card" parent="">
+    <style name="ThemeOverlay.MovieDB.Card" parent="">
         <!-- <item name="colorPrimary">@color/shrine_pink_100</item>
          <item name="colorSurface">@color/shrine_pink_light</item>
          <item name="colorOnSurface">@color/shrine_pink_900</item>-->
     </style>
 
 
-    <style name="Widget.PaperflyGo.CheckBox" parent="Widget.MaterialComponents.CompoundButton.CheckBox">
+    <style name="Widget.MovieDB.CheckBox" parent="Widget.MaterialComponents.CompoundButton.CheckBox">
         <item name="useMaterialThemeColors">false</item>
         <item name="android:paddingStart">12dp</item>
         <item name="android:button">@drawable/custom_checkbox</item>
     </style>
 
-    <style name="Widget.PaperflyGo.CheckBox.Default" parent="Widget.MaterialComponents.CompoundButton.CheckBox">
+    <style name="Widget.MovieDB.CheckBox.Default" parent="Widget.MaterialComponents.CompoundButton.CheckBox">
         <item name="android:checked">true</item>
-        <item name="materialThemeOverlay">@style/ThemeOverlay.PaperflyGo.CheckBox</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.MovieDB.CheckBox</item>
     </style>
 
-    <style name="ThemeOverlay.PaperflyGo.CheckBox" parent="">
+    <style name="ThemeOverlay.MovieDB.CheckBox" parent="">
         <item name="colorOnSurface">@color/line_default</item>
         <item name="colorSecondary">@color/dark_primary</item>
     </style>

@@ -3,22 +3,24 @@ package com.rasel.moviedb.ui.dashboard.view.fragment
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.widget.Toast
+import androidx.annotation.MenuRes
+import androidx.appcompat.widget.PopupMenu
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.paging.LoadState
-import androidx.recyclerview.widget.DividerItemDecoration
-import com.rasel.moviedb.ui.dashboard.adapter.ReposLoadStateAdapter
+import com.rasel.moviedb.ui.dashboard.adapter.MoviesLoadStateAdapter
 import com.rasel.moviedb.R
 import com.rasel.moviedb.data.preference.AppPrefsManager
 import com.rasel.moviedb.databinding.FragmentMovieListBinding
-import com.rasel.moviedb.ui.dashboard.adapter.ReposAdapter
+import com.rasel.moviedb.ui.dashboard.adapter.MovieListAdapter
 import com.rasel.moviedb.ui.dashboard.view_model.HomeViewModel
 import com.rasel.moviedb.utils.changeStatusBarColor
 import dagger.hilt.android.AndroidEntryPoint
@@ -32,12 +34,11 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class MovieListFragment : Fragment() {
 
+    private lateinit var adapter: MovieListAdapter
+
     @Inject
     lateinit var preferences: AppPrefsManager
     private lateinit var binding: FragmentMovieListBinding
-
-    private val adapter = ReposAdapter()
-
 
     private var searchJob: Job? = null
     private val viewModel: HomeViewModel by viewModels()
@@ -74,26 +75,34 @@ class MovieListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // add dividers between RecyclerView's row items
-        val decoration = DividerItemDecoration(context, DividerItemDecoration.VERTICAL)
-        binding.recyclerView.addItemDecoration(decoration)
-
         initAdapter()
-        val query = savedInstanceState?.getString(LAST_SEARCH_QUERY) ?: DEFAULT_QUERY
+        val query = savedInstanceState?.getString(LAST_SEARCH_QUERY) ?: ""
         search(query)
         initSearch(query)
         binding.retryButton.setOnClickListener { adapter.retry() }
 
+        binding.imgFilter.setOnClickListener {
+            showMenu(it, )
+        }
+
     }
+
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        outState.putString(LAST_SEARCH_QUERY, binding.searchRepo.text.trim().toString())
+        outState.putString(LAST_SEARCH_QUERY, binding.searchRepo.text?.trim().toString())
     }
 
     private fun initAdapter() {
+
+        adapter = MovieListAdapter { id, checked, position ->
+            viewModel.addAsFavorite(id, checked)
+            adapter.notifyItemChanged(position)
+        }
+
+
         binding.recyclerView.adapter = adapter.withLoadStateHeaderAndFooter(
-            header = ReposLoadStateAdapter { adapter.retry() },
-            footer = ReposLoadStateAdapter { adapter.retry() }
+            header = MoviesLoadStateAdapter { adapter.retry() },
+            footer = MoviesLoadStateAdapter { adapter.retry() }
         )
         adapter.addLoadStateListener { loadState ->
 
@@ -102,11 +111,12 @@ class MovieListFragment : Fragment() {
             showEmptyList(isListEmpty)
 
             // Only show the list if refresh succeeds, either from the the local db or the remote.
-           // binding.recyclerView.isVisible =  loadState.source.refresh is LoadState.NotLoading || loadState.mediator?.refresh is LoadState.NotLoading
+            // binding.recyclerView.isVisible =  loadState.source.refresh is LoadState.NotLoading || loadState.mediator?.refresh is LoadState.NotLoading
             // Show loading spinner during initial load or refresh.
             binding.progressBar.isVisible = loadState.mediator?.refresh is LoadState.Loading
             // Show the retry state if initial load or refresh fails and there are no items.
-            binding.retryButton.isVisible = loadState.mediator?.refresh is LoadState.Error && adapter.itemCount == 0
+            binding.retryButton.isVisible =
+                loadState.mediator?.refresh is LoadState.Error && adapter.itemCount == 0
             // Toast on any error, regardless of whether it came from RemoteMediator or PagingSource
             val errorState = loadState.source.append as? LoadState.Error
                 ?: loadState.source.prepend as? LoadState.Error
@@ -125,6 +135,7 @@ class MovieListFragment : Fragment() {
     private fun initSearch(query: String) {
         binding.searchRepo.setText(query)
 
+        binding.btnSearch.setOnClickListener { updateRepoListFromInput() }
         binding.searchRepo.setOnEditorActionListener { _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_GO) {
                 updateRepoListFromInput()
@@ -154,8 +165,8 @@ class MovieListFragment : Fragment() {
     }
 
     private fun updateRepoListFromInput() {
-        binding.searchRepo.text.trim().let {
-            if (it.isNotEmpty()) {
+        binding.searchRepo.text?.trim().let {
+            if (!it.isNullOrEmpty()) {
                 search(it.toString())
             }
         }
@@ -170,10 +181,25 @@ class MovieListFragment : Fragment() {
             binding.recyclerView.visibility = View.VISIBLE
         }
     }
+
+    private fun showMenu(v: View, @MenuRes menuRes: Int) {
+        val popup = PopupMenu(v.context, v)
+        popup.menuInflater.inflate(menuRes, popup.menu)
+
+        popup.setOnMenuItemClickListener { menuItem: MenuItem ->
+            // Respond to menu item click.
+        }
+        popup.setOnDismissListener {
+            // Respond to popup being dismissed.
+        }
+        // Show the popup menu.
+        popup.show()
+    }
+
     companion object {
 
         private const val LAST_SEARCH_QUERY: String = "last_search_query"
-        private const val DEFAULT_QUERY = "Android"
+
         @JvmStatic
         fun newInstance(): MovieListFragment {
             return MovieListFragment()

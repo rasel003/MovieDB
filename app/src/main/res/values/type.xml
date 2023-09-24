@@ -3,66 +3,66 @@
 <resources>
 
     <!--Typography-->
-    <style name="TextAppearance.PaperflyGo.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
+    <style name="TextAppearance.MovieDB.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
         <item name="fontFamily">@font/inter_semibold</item>
         <item name="android:textColor">@color/color_on_surface_emphasis_high</item>
     </style>
 
-    <style name="TextAppearance.PaperflyGo.Headline3" parent="TextAppearance.MaterialComponents.Headline3">
+    <style name="TextAppearance.MovieDB.Headline3" parent="TextAppearance.MaterialComponents.Headline3">
         <item name="fontFamily">@font/inter_bold</item>
         <item name="android:textColor">@color/color_on_surface_emphasis_high</item>
     </style>
 
-    <style name="TextAppearance.PaperflyGo.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
+    <style name="TextAppearance.MovieDB.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
         <item name="fontFamily">@font/inter_bold</item>
         <item name="android:textColor">@color/color_on_surface_emphasis_high</item>
     </style>
 
-    <style name="TextAppearance.PaperflyGo.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
+    <style name="TextAppearance.MovieDB.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
         <item name="fontFamily">@font/inter_bold</item>
         <item name="android:textColor">@color/color_on_surface_emphasis_high</item>
     </style>
 
-    <style name="TextAppearance.PaperflyGo.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+    <style name="TextAppearance.MovieDB.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
         <item name="fontFamily">@font/inter</item>
         <item name="android:textColor">@color/color_on_surface_emphasis_high</item>
     </style>
 
-    <style name="TextAppearance.PaperflyGo.Body1" parent="TextAppearance.MaterialComponents.Body1">
+    <style name="TextAppearance.MovieDB.Body1" parent="TextAppearance.MaterialComponents.Body1">
         <item name="fontFamily">@font/inter</item>
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/color_on_surface_emphasis_high</item>
         <item name="lineHeight">24sp</item>
     </style>
 
-    <style name="TextAppearance.PaperflyGo.Body2" parent="TextAppearance.MaterialComponents.Body2">
+    <style name="TextAppearance.MovieDB.Body2" parent="TextAppearance.MaterialComponents.Body2">
         <item name="fontFamily">@font/inter</item>
         <item name="android:textColor">@color/color_on_surface_emphasis_high</item>
         <item name="android:textSize">14sp</item>
     </style>
 
-    <style name="TextAppearance.PaperflyGo.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+    <style name="TextAppearance.MovieDB.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
         <item name="fontFamily">@font/inter</item>
         <item name="android:textColor">@color/color_on_surface_emphasis_high</item>
     </style>
 
-    <style name="TextAppearance.PaperflyGo.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
+    <style name="TextAppearance.MovieDB.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
         <item name="fontFamily">@font/inter</item>
         <item name="android:textColor">@color/color_on_surface_emphasis_high</item>
     </style>
 
-    <style name="TextAppearance.PaperflyGo.Button" parent="TextAppearance.MaterialComponents.Button">
+    <style name="TextAppearance.MovieDB.Button" parent="TextAppearance.MaterialComponents.Button">
         <item name="fontFamily">@font/inter</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:textColor">@color/color_on_surface_emphasis_high</item>
     </style>
 
-    <style name="TextAppearance.PaperflyGo.Caption" parent="TextAppearance.MaterialComponents.Caption">
+    <style name="TextAppearance.MovieDB.Caption" parent="TextAppearance.MaterialComponents.Caption">
         <item name="fontFamily">@font/inter</item>
         <item name="android:textColor">@color/color_on_surface_emphasis_high</item>
     </style>
 
-    <style name="TextAppearance.PaperflyGo.Overline" parent="TextAppearance.MaterialComponents.Overline">
+    <style name="TextAppearance.MovieDB.Overline" parent="TextAppearance.MaterialComponents.Overline">
         <item name="fontFamily">@font/inter_semibold</item>
         <item name="android:textSize">12sp</item>
         <item name="android:textAllCaps">true</item>

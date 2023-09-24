@@ -15,7 +15,7 @@ import com.rasel.moviedb.utils.CHANNEL_ID_RECEIVED_LEAVE_REQUEST
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
-class GoApplication : Application() {
+class MovieDBApplication : Application() {
     override fun onCreate() {
         super.onCreate()
 
@@ -37,7 +37,7 @@ class GoApplication : Application() {
     }
 
     companion object {
-        lateinit var myAppInstance: GoApplication
+        lateinit var myAppInstance: MovieDBApplication
         var isLanguageSynced: Boolean = false
     }
 

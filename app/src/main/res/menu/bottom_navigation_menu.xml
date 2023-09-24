@@ -3,16 +3,16 @@
     <item
         android:id="@+id/actionMovie"
         android:enabled="true"
-        android:icon="@drawable/ic_checked_2"
+        android:icon="@drawable/ic_baseline_movie_24"
         android:title="Movie" />
     <item
         android:id="@+id/actionTVShow"
         android:enabled="true"
-        android:icon="@drawable/ic_arrow_down"
+        android:icon="@drawable/ic_baseline_live_tv_24"
         android:title="TV Show" />
     <item
         android:id="@+id/actionGraph"
         android:enabled="true"
-        android:icon="@drawable/ic_unchecked_border"
+        android:icon="@drawable/ic_baseline_bar_chart_24"
         android:title="Graph" />
 </menu>

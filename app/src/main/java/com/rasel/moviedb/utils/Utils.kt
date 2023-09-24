@@ -96,7 +96,7 @@ fun getDatePicker(
     val builder = MaterialDatePicker.Builder.datePicker()
         .setTitleText("Select date")
         .setCalendarConstraints(constraintsBuilder.build())
-        .setTheme(R.style.ThemeOverlay_PaperflyGo_DatePicker)
+        .setTheme(R.style.ThemeOverlay_MovieDB_DatePicker)
     if (isTodaySelected) {
         builder.setSelection(MaterialDatePicker.todayInUtcMilliseconds())
     }
@@ -129,7 +129,7 @@ fun getDateRangePicker(
     val builder = MaterialDatePicker.Builder.dateRangePicker()
         .setTitleText("Select dates")
         .setCalendarConstraints(constraintsBuilder.build())
-        .setTheme(R.style.ThemeOverlay_PaperflyGo_DatePicker)
+        .setTheme(R.style.ThemeOverlay_MovieDB_DatePicker)
     if (currentMonthSelected) {
         builder.setSelection(
             Pair(

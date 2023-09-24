@@ -1,8 +1,8 @@
 <resources>
     <!--Final, top-level theme-->
-    <style name="Theme.PaperflyGo.DayNight" parent="Theme.PaperflyGo.Dark" />
+    <style name="Theme.MovieDB.DayNight" parent="Theme.MovieDB.Dark" />
 
-    <style name="Theme.PaperflyGo.Dark" parent="Theme.PaperflyGo">
+    <style name="Theme.MovieDB.Dark" parent="Theme.MovieDB">
 
     </style>
 </resources>

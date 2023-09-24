@@ -49,12 +49,12 @@ class HomeViewModel @Inject constructor(
 
                     if (before == null) {
                         // we're at the beginning of the list
-                        return@insertSeparators UiModel.SeparatorItem("${after.roundedStarCount}0.000+ stars")
+                        return@insertSeparators UiModel.SeparatorItem("${roundedStarCount}0.000+ stars")
                     }
                     // check between 2 items
-                    if (before.roundedStarCount > after.roundedStarCount) {
-                        if (after.roundedStarCount >= 1) {
-                            UiModel.SeparatorItem("${after.roundedStarCount}0.000+ stars")
+                    if (roundedStarCount > roundedStarCount) {
+                        if (roundedStarCount >= 1) {
+                            UiModel.SeparatorItem("${roundedStarCount}0.000+ stars")
                         } else {
                             UiModel.SeparatorItem("< 10.000+ stars")
                         }
@@ -73,6 +73,10 @@ class HomeViewModel @Inject constructor(
         _movieDetailsResponse.value = Resource.Loading
         _movieDetailsResponse.value = repository.getMovieInfo(movieId)
     }
+
+    fun addAsFavorite(id: Int, checked: Boolean) {
+        repository.addAsFavorite(id, checked)
+    }
 }
 
 sealed class UiModel {
@@ -80,5 +84,4 @@ sealed class UiModel {
     data class SeparatorItem(val description: String) : UiModel()
 }
 
-private val UiModel.RepoItem.roundedStarCount: Int
-    get() = 4
+private val roundedStarCount: Int =4

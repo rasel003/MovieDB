@@ -4,17 +4,17 @@
 
     <!--Shape-->
 
-    <style name="ShapeAppearance.PaperflyGo.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+    <style name="ShapeAppearance.MovieDB.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">@dimen/reply_small_component_corner_radius</item>
     </style>
 
-    <style name="ShapeAppearance.PaperflyGo.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+    <style name="ShapeAppearance.MovieDB.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">@dimen/reply_medium_component_corner_radius</item>
     </style>
 
-    <style name="ShapeAppearance.PaperflyGo.LargeComponent" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+    <style name="ShapeAppearance.MovieDB.LargeComponent" parent="ShapeAppearance.MaterialComponents.LargeComponent">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">@dimen/reply_large_component_corner_radius</item>
     </style>
@@ -24,49 +24,49 @@
     <dimen name="reply_large_component_corner_radius">16dp</dimen>
 
 
-    <style name="ShapeAppearance.PaperflyGo.Card" parent="ShapeAppearance.MaterialComponents">
+    <style name="ShapeAppearance.MovieDB.Card" parent="ShapeAppearance.MaterialComponents">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">16dp</item>
     </style>
 
-    <style name="ShapeAppearance.PaperflyGo.Button.Submit" parent="ShapeAppearance.MaterialComponents">
+    <style name="ShapeAppearance.MovieDB.Button.Submit" parent="ShapeAppearance.MaterialComponents">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">4dp</item>
         <item name="cornerSizeBottomRight">0dp</item>
         <item name="cornerSizeBottomLeft">0dp</item>
     </style>
 
-    <style name="ShapeAppearance.PaperflyGo.Button.round.Submit" parent="ShapeAppearance.MaterialComponents">
+    <style name="ShapeAppearance.MovieDB.Button.round.Submit" parent="ShapeAppearance.MaterialComponents">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">4dp</item>
     </style>
 
 
-    <style name="ShapeAppearance.PaperflyGo.Button.Submit.Rounded" parent="ShapeAppearance.MaterialComponents">
+    <style name="ShapeAppearance.MovieDB.Button.Submit.Rounded" parent="ShapeAppearance.MaterialComponents">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">4dp</item>
     </style>
 
     <!-- Add plant button -->
 
-    <style name="ShapeAppearance.PaperflyGo.Circular" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+    <style name="ShapeAppearance.MovieDB.Circular" parent="ShapeAppearance.MaterialComponents.SmallComponent">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
     </style>
 
 
-    <style name="ShapeAppearance.PaperflyGo.EditText.Rounded_24" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+    <style name="ShapeAppearance.MovieDB.EditText.Rounded_24" parent="ShapeAppearance.MaterialComponents.SmallComponent">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">16dp</item>
     </style>
 
-    <style name="ShapeAppearance.PaperflyGo.Rounded_30_percent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+    <style name="ShapeAppearance.MovieDB.Rounded_30_percent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">30%</item>
     </style>
 
 
-    <style name="ShapeAppearance.PaperflyGo.Card.BottomRadius" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+    <style name="ShapeAppearance.MovieDB.Card.BottomRadius" parent="ShapeAppearance.MaterialComponents.MediumComponent">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSizeBottomLeft">16dp</item>
         <item name="cornerSizeBottomRight">16dp</item>

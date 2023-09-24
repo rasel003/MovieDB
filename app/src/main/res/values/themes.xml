@@ -1,41 +1,41 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!--Final, top-level theme-->
-    <style name="Theme.PaperflyGo.DayNight" parent="Theme.PaperflyGo" />
+    <style name="Theme.MovieDB.DayNight" parent="Theme.MovieDB" />
 
-    <style name="Theme.PaperflyGo" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="Theme.MovieDB" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorSecondary">@color/colorSecondary</item>
         <item name="colorPrimaryDark">@color/colorSecondary</item>
         <item name="colorAccent">@color/colorAccent</item>
 
 
-        <item name="materialCardViewStyle">@style/Widget.PaperflyGo.CardView</item>
-        <item name="checkboxStyle">@style/Widget.PaperflyGo.CheckBox</item>
+        <item name="materialCardViewStyle">@style/Widget.MovieDB.CardView</item>
+        <item name="checkboxStyle">@style/Widget.MovieDB.CheckBox</item>
 
 
         <item name="shapeAppearanceSmallComponent">
-            @style/ShapeAppearance.PaperflyGo.SmallComponent
+            @style/ShapeAppearance.MovieDB.SmallComponent
         </item>
         <item name="shapeAppearanceMediumComponent">
-            @style/ShapeAppearance.PaperflyGo.MediumComponent
+            @style/ShapeAppearance.MovieDB.MediumComponent
         </item>
         <item name="shapeAppearanceLargeComponent">
-            @style/ShapeAppearance.PaperflyGo.LargeComponent
+            @style/ShapeAppearance.MovieDB.LargeComponent
         </item>
 
         <!--Typography-->
-        <item name="textAppearanceHeadline2">@style/TextAppearance.PaperflyGo.Headline2</item>
-        <item name="textAppearanceHeadline3">@style/TextAppearance.PaperflyGo.Headline3</item>
-        <item name="textAppearanceHeadline4">@style/TextAppearance.PaperflyGo.Headline4</item>
-        <item name="textAppearanceHeadline5">@style/TextAppearance.PaperflyGo.Headline5</item>
-        <item name="textAppearanceHeadline6">@style/TextAppearance.PaperflyGo.Headline6</item>
-        <item name="textAppearanceSubtitle1">@style/TextAppearance.PaperflyGo.Subtitle1</item>
-        <item name="textAppearanceSubtitle2">@style/TextAppearance.PaperflyGo.Subtitle2</item>
-        <item name="textAppearanceBody1">@style/TextAppearance.PaperflyGo.Body1</item>
-        <item name="textAppearanceBody2">@style/TextAppearance.PaperflyGo.Body2</item>
-        <item name="textAppearanceButton">@style/TextAppearance.PaperflyGo.Button</item>
-        <item name="textAppearanceCaption">@style/TextAppearance.PaperflyGo.Caption</item>
-        <item name="textAppearanceOverline">@style/TextAppearance.PaperflyGo.Overline</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.MovieDB.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.MovieDB.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.MovieDB.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.MovieDB.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.MovieDB.Headline6</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.MovieDB.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.MovieDB.Subtitle2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.MovieDB.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.MovieDB.Body2</item>
+        <item name="textAppearanceButton">@style/TextAppearance.MovieDB.Button</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.MovieDB.Caption</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.MovieDB.Overline</item>
 
         <item name="emphasisHighAlpha">0.87</item>
         <item name="emphasisMediumAlpha">0.60</item>
@@ -59,7 +59,7 @@
         <item name="scrimBackground">@color/backgroundColor</item>
     </style>
 
-    <style name="SplashTheme" parent="Theme.PaperflyGo">
+    <style name="SplashTheme" parent="Theme.MovieDB">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowActionBar">false</item>
         <item name="android:windowFullscreen">false</item>
@@ -71,27 +71,27 @@
         <item name="android:windowBackground">@drawable/preview_window</item>
     </style>
 
-    <!--<style name="SplashTheme" parent="Theme.PaperflyGo">
+    <!--<style name="SplashTheme" parent="Theme.MovieDB">
 
         <item name="android:windowBackground">@drawable/ic_paperfly_logo</item>
     </style>-->
 
-    <style name="Theme.PaperflyGo.LightBlue" parent="Theme.PaperflyGo">
+    <style name="Theme.MovieDB.LightBlue" parent="Theme.MovieDB">
         <item name="android:statusBarColor">@color/dark_secondary_color</item>
     </style>
 
-    <style name="Theme.PaperflyGo.Blue" parent="Theme.PaperflyGo">
+    <style name="Theme.MovieDB.Blue" parent="Theme.MovieDB">
         <item name="android:statusBarColor">@color/dark_primary</item>
         <item name="android:windowLightStatusBar" tools:ignore="NewApi">false</item>
     </style>
 
-    <style name="ThemeOverlay.PaperflyGo.DatePicker" parent="@style/ThemeOverlay.MaterialComponents.MaterialCalendar">
+    <style name="ThemeOverlay.MovieDB.DatePicker" parent="@style/ThemeOverlay.MaterialComponents.MaterialCalendar">
         <item name="colorPrimary">@color/dark_primary</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="colorOnSurface">@color/black</item>
     </style>
 
-    <style name="ThemeOverlay.PaperflyGo.TimePicker" parent="@style/ThemeOverlay.MaterialComponents.TimePicker">
+    <style name="ThemeOverlay.MovieDB.TimePicker" parent="@style/ThemeOverlay.MaterialComponents.TimePicker">
         <item name="colorPrimary">@color/dark_primary</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="colorOnSurface">@color/black</item>

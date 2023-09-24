@@ -29,6 +29,11 @@
     <color name="black_500">#7b7b7b</color>
     <color name="black">#000000</color>
 
+
+    <color name="yellow_900">#F57F17</color>
+
+
+
     <color name="color_back_bg">#EBF1FA</color>
 
     <color name="color_time_line_curve">#EFFEFF</color>

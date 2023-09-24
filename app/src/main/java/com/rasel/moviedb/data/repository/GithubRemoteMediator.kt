@@ -81,16 +81,16 @@ class GithubRemoteMediator(
         }
 
         try {
-            //val apiResponse = service.getMovieList( page)
+            val apiResponse = service.getMovieList( page)
 
-            val endOfPaginationReached = true
-            /*val repos = apiResponse.items
+            val repos = apiResponse.items
+            val endOfPaginationReached = repos.isEmpty()
             repoDatabase.withTransaction {
                 // clear all tables in the database
-                if (loadType == LoadType.REFRESH) {
+                /*if (loadType == LoadType.REFRESH) {
                     repoDatabase.remoteKeysDao().clearRemoteKeys()
                     repoDatabase.reposDao().clearRepos()
-                }
+                }*/
                 val prevKey = if (page == STARTING_PAGE_INDEX) null else page - 1
                 val nextKey = if (endOfPaginationReached) null else page + 1
                 val keys = repos.map {
@@ -98,7 +98,7 @@ class GithubRemoteMediator(
                 }
                 repoDatabase.remoteKeysDao().insertAll(keys)
                 repoDatabase.reposDao().insertAll(repos)
-            }*/
+            }
             return MediatorResult.Success(endOfPaginationReached = endOfPaginationReached)
         } catch (exception: IOException) {
             return MediatorResult.Error(exception)

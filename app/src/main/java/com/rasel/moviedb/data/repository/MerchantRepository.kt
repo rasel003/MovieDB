@@ -28,7 +28,7 @@ class MerchantRepository @Inject constructor(
 
         // appending '%' so we can allow other characters to be before and after the query string
         val dbQuery = "%${query.replace(' ', '%')}%"
-        val pagingSourceFactory = { appDatabase.reposDao().reposByName() }
+        val pagingSourceFactory = { appDatabase.reposDao().reposByName(dbQuery) }
 
         @OptIn(ExperimentalPagingApi::class)
         return Pager(
@@ -44,6 +44,10 @@ class MerchantRepository @Inject constructor(
 
     suspend fun getMovieInfo(movieId: String) = safeApiCall {
         api.getMovieInfo(movieId)
+    }
+
+    fun addAsFavorite(id: Int, checked: Boolean) {
+        appDatabase.reposDao().addAsFavorite(id, checked)
     }
 
     companion object {
