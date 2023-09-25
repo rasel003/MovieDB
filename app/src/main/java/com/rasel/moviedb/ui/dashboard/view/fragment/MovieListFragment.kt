@@ -82,7 +82,7 @@ class MovieListFragment : Fragment() {
         binding.retryButton.setOnClickListener { adapter.retry() }
 
         binding.imgFilter.setOnClickListener {
-            showMenu(it, )
+            showMenu(it, R.menu.filter_menu)
         }
 
     }
@@ -188,6 +188,11 @@ class MovieListFragment : Fragment() {
 
         popup.setOnMenuItemClickListener { menuItem: MenuItem ->
             // Respond to menu item click.
+            when(menuItem.itemId){
+                R.id.option_favorite -> { return@setOnMenuItemClickListener true}
+                R.id.option_rating -> { return@setOnMenuItemClickListener true}
+                else -> {return@setOnMenuItemClickListener false}
+            }
         }
         popup.setOnDismissListener {
             // Respond to popup being dismissed.

@@ -53,10 +53,10 @@ class MovieDetailsActivity : AppCompatActivity() {
                     binding.tvMovieType.text =
                         response.genres.joinToString(separator = " / ") { it.name }
 
-                    /*Glide
+                    Glide
                         .with(this)
-                        .load("https://image.tmdb.org/t/p/w500/${response.posterPath}")
-                        .into(binding.imgMovieCover)*/
+                        .load("https://image.tmdb.org/t/p/w1000/${response.posterPath}")
+                        .into(binding.imgMovieCover)
                 }
 
                 is Resource.Failure -> {

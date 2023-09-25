@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/option_favorite"
+    <item
+        android:id="@+id/option_favorite"
         android:title="Show Favorite" />
-    <item android:id="@+id/option_"
-        android:title="@string/option_2" />
-    <item android:id="@+id/option_3"
-        android:title="@string/option_3" />
+    <item
+        android:id="@+id/option_rating"
+        android:title="Order By Rating" />
 </menu>

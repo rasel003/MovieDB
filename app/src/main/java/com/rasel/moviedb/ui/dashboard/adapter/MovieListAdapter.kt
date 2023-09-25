@@ -22,6 +22,7 @@ import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.bumptech.glide.Glide
 import com.orhanobut.logger.Logger
 import com.rasel.moviedb.R
 import com.rasel.moviedb.data.db.entities.MovieInfo
@@ -54,6 +55,7 @@ class MovieListAdapter(
         uiModel.let {
             when (uiModel) {
                 is UiModel.RepoItem -> (holder as MovieViewHolder).bind(uiModel.movieInfo)
+                is UiModel.SeparatorItem -> (holder as SeparatorViewHolder).bind(uiModel.description)
                 else -> {}
             }
         }
@@ -103,10 +105,10 @@ class MovieListAdapter(
             binding.cbFavorite.isChecked = !movieInfo.isFavorite
 
 
-            /* Glide
+             Glide
                  .with(binding.rootLayout.context)
-                 .load("https://image.tmdb.org/t/p/w1000/${movieInfo.posterPath}")
-                 .into(binding.imgMovieCover)*/
+                 .load("https://image.tmdb.org/t/p/w500/${movieInfo.posterPath}")
+                 .into(binding.imgMovieCover)
 
             // if the description is missing, hide the TextView
             var descriptionVisibility = View.GONE
